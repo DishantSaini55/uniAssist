@@ -1,0 +1,93 @@
+{
+  "request": {
+    "X-Student-Id": null,
+    "question": "What is the minimum attendance required to appear for end-semester exams?",
+    "as_of_date": "2026-10-06"
+  },
+  "response": {
+    "trace_id": "15197dec061d",
+    "answer": "With effect from 1 August 2026, the minimum attendance required to appear in the end-semester examination shall be 80% in each course.\n(Source: Circular ACAD/2026/08 - Revised minimum attendance (synthetic fixture), section 1.1, page 1, version 1.0, effective 2026-08-01.)\n\nUpcoming change (not yet in force): FIX-CIR-2027-01 takes effect on 2027-01-01: \"With effect from 1 January 2027, the minimum attendance required to appear in the end-semester examination shall be 85% in each course.\"",
+    "answer_type": "retrieved_fact",
+    "citations": [
+      {
+        "doc_id": "FIX-CIR-2026-08",
+        "title": "Circular ACAD/2026/08 - Revised minimum attendance (synthetic fixture)",
+        "section": "1.1",
+        "page": 1,
+        "version": "1.0",
+        "effective_from": "2026-08-01",
+        "authority_level": 2
+      }
+    ],
+    "tools_invoked": [],
+    "applied_rules": [],
+    "conflicts_detected": [],
+    "explanation": "Answered directly from Circular ACAD/2026/08 - Revised minimum attendance (synthetic fixture) (authority level 2, circular). Applicability (step 1): FIX-CIR-2027-01 takes effect on 2027-01-01, after the as-of date 2026-10-06, so it is not treated as current (upcoming change). Explicit supersession (step 2): FIX-CIR-2026-08 (level 2) supersedes FIX-REG-2024 clause 7.2, so that text is not applied. Authority (step 3): FIX-FAQ-2026 (level 4) says min_attendance_pct=65, but FIX-CIR-2026-08 (level 2) prevails over it.",
+    "as_of_date": "2026-10-06",
+    "assumptions": [],
+    "upcoming_changes": [
+      {
+        "doc_id": "FIX-CIR-2027-01",
+        "section": "1.1",
+        "effective_from": "2027-01-01",
+        "title": "Circular ACAD/2027/01 - Attendance from January 2027 (synthetic fixture)"
+      }
+    ]
+  },
+  "audit_record": {
+    "trace_id": "15197dec061d",
+    "timestamp": "2026-10-11T16:03:52+00:00",
+    "student_id": null,
+    "question_category": "policy_fact",
+    "as_of_date": "2026-10-06",
+    "question_sha256": "4627363f7dda4e7d",
+    "sources_retrieved": [
+      {
+        "doc_id": "FIX-CIR-2026-08",
+        "section": "1.1",
+        "score": 0.8379
+      },
+      {
+        "doc_id": "FIX-CIR-2027-01",
+        "section": "1.1",
+        "score": 0.828
+      },
+      {
+        "doc_id": "FIX-REG-2024",
+        "section": "7.2",
+        "score": 0.8158
+      },
+      {
+        "doc_id": "FIX-FAQ-2026",
+        "section": "1.1",
+        "score": 0.759
+      },
+      {
+        "doc_id": "FIX-REG-2024",
+        "section": "9.1",
+        "score": 0.6993
+      }
+    ],
+    "precedence_decision": "Applicability (step 1): FIX-CIR-2027-01 takes effect on 2027-01-01, after the as-of date 2026-10-06, so it is not treated as current (upcoming change). Explicit supersession (step 2): FIX-CIR-2026-08 (level 2) supersedes FIX-REG-2024 clause 7.2, so that text is not applied. Authority (step 3): FIX-FAQ-2026 (level 4) says min_attendance_pct=65, but FIX-CIR-2026-08 (level 2) prevails over it.",
+    "tools_invoked": [],
+    "rules_applied": [],
+    "conflicts_detected": [],
+    "answer_type": "retrieved_fact",
+    "planner": "heuristic",
+    "model": "none (deterministic templates)",
+    "llm_calls": 0,
+    "tokens": 0,
+    "llm_errors": [],
+    "latency_ms": 44,
+    "retrieval_config": {
+      "embedding": "BAAI/bge-small-en-v1.5",
+      "chunking": "section",
+      "top_k": 5
+    },
+    "abstention_signals": {
+      "best_score": 0.8379,
+      "term_coverage": 1.0,
+      "unmatched_terms": []
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "request": {
+    "X-Student-Id": "S1017",
+    "question": "What is the re-evaluation deadline?",
+    "as_of_date": "2026-10-06"
+  },
+  "response": {
+    "trace_id": "82c0638a235d",
+    "answer": "The authorised sources conflict and the precedence policy cannot resolve it, so I will not pick one. FIX-NOTICE-ECE-A (section 1.1) states: \"Requests for re-evaluation must be submitted within 3 working days of the declaration of the result.\" FIX-NOTICE-ECE-B (section 1.1) states: \"Requests for re-evaluation must be submitted within 5 working days of the declaration of the result.\" Please contact the issuing office to confirm.",
+    "answer_type": "conflict_flagged",
+    "citations": [
+      {
+        "doc_id": "FIX-NOTICE-ECE-A",
+        "title": "ECE Department Notice A - Re-evaluation (synthetic fixture)",
+        "section": "1.1",
+        "page": 1,
+        "version": "1.0",
+        "effective_from": "2026-09-01",
+        "authority_level": 3
+      },
+      {
+        "doc_id": "FIX-NOTICE-ECE-B",
+        "title": "ECE Department Notice B - Re-evaluation (synthetic fixture)",
+        "section": "1.1",
+        "page": 1,
+        "version": "1.0",
+        "effective_from": "2026-09-01",
+        "authority_level": 3
+      }
+    ],
+    "tools_invoked": [],
+    "applied_rules": [],
+    "conflicts_detected": [
+      {
+        "topic": "reevaluation_deadline_days",
+        "sources": [
+          {
+            "id": "FIX-NOTICE-ECE-A::1",
+            "doc_id": "FIX-NOTICE-ECE-A",
+            "section": "1.1",
+            "authority_level": 3,
+            "effective_from": "2026-09-01",
+            "value": "3"
+          },
+          {
+            "id": "FIX-NOTICE-ECE-B::1",
+            "doc_id": "FIX-NOTICE-ECE-B",
+            "section": "1.1",
+            "authority_level": 3,
+            "effective_from": "2026-09-01",
+            "value": "5"
+          }
+        ],
+        "reason": "same authority level and effective date but different values; the precedence policy cannot resolve this"
+      }
+    ],
+    "explanation": "Equal authority level and effective date with different values (Annex A step 5).",
+    "as_of_date": "2026-10-06",
+    "assumptions": [],
+    "upcoming_changes": [
+      {
+        "doc_id": "FIX-CIR-2027-01",
+        "section": "1.1",
+        "effective_from": "2027-01-01",
+        "title": "Circular ACAD/2027/01 - Attendance from January 2027 (synthetic fixture)"
+      }
+    ]
+  },
+  "audit_record": {
+    "trace_id": "82c0638a235d",
+    "timestamp": "2026-10-11T16:03:52+00:00",
+    "student_id": "S1017",
+    "question_category": "policy_fact",
+    "as_of_date": "2026-10-06",
+    "question_sha256": "e7832be4807ed90a",
+    "sources_retrieved": [
+      {
+        "doc_id": "FIX-NOTICE-ECE-A",
+        "section": "1.1",
+        "score": 0.7433
+      },
+      {
+        "doc_id": "FIX-NOTICE-ECE-B",
+        "section": "1.1",
+        "score": 0.7424
+      },
+      {
+        "doc_id": "FIX-NOTICE-ECE-A",
+        "section": "preamble",
+        "score": 0.6436
+      },
+      {
+        "doc_id": "FIX-NOTICE-ECE-B",
+        "section": "preamble",
+        "score": 0.623
+      },
+      {
+        "doc_id": "FIX-CIR-2026-08",
+        "section": "1.1",
+        "score": 0.5921
+      }
+    ],
+    "precedence_decision": "Applicability (step 1): FIX-CIR-2027-01 takes effect on 2027-01-01, after the as-of date 2026-10-06, so it is not treated as current (upcoming change). Explicit supersession (step 2): FIX-CIR-2026-08 (level 2) supersedes FIX-REG-2024 clause 7.2, so that text is not applied. Unresolved (step 5): sources at the same authority and date disagree on reevaluation_deadline_days; both are reported and the student should contact the issuing office. Authority (step 3): FIX-FAQ-2026 (level 4) says min_attendance_pct=65, but FIX-CIR-2026-08 (level 2) prevails over it.",
+    "tools_invoked": [],
+    "rules_applied": [],
+    "conflicts_detected": [
+      {
+        "topic": "reevaluation_deadline_days",
+        "sources": [
+          {
+            "id": "FIX-NOTICE-ECE-A::1",
+            "doc_id": "FIX-NOTICE-ECE-A",
+            "section": "1.1",
+            "authority_level": 3,
+            "effective_from": "2026-09-01",
+            "value": "3"
+          },
+          {
+            "id": "FIX-NOTICE-ECE-B::1",
+            "doc_id": "FIX-NOTICE-ECE-B",
+            "section": "1.1",
+            "authority_level": 3,
+            "effective_from": "2026-09-01",
+            "value": "5"
+          }
+        ],
+        "reason": "same authority level and effective date but different values; the precedence policy cannot resolve this"
+      }
+    ],
+    "answer_type": "conflict_flagged",
+    "planner": "heuristic",
+    "model": "none (deterministic templates)",
+    "llm_calls": 0,
+    "tokens": 0,
+    "llm_errors": [],
+    "latency_ms": 29,
+    "retrieval_config": {
+      "embedding": "BAAI/bge-small-en-v1.5",
+      "chunking": "section",
+      "top_k": 5
+    },
+    "abstention_signals": {
+      "best_score": 0.7433,
+      "term_coverage": 0.5,
+      "unmatched_terms": [
+        "deadline"
+      ]
+    }
+  }
+}

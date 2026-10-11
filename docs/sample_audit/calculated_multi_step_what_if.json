@@ -1,0 +1,304 @@
+{
+  "request": {
+    "X-Student-Id": "S1003",
+    "question": "I failed Data Structures. If I pass the supplementary, will I be eligible for placement?",
+    "as_of_date": "2026-10-06"
+  },
+  "response": {
+    "trace_id": "332ebbced9fe",
+    "answer": "If you pass the supplementary in CS201: you would be eligible for campus placement.",
+    "answer_type": "calculated",
+    "citations": [
+      {
+        "doc_id": "FIX-PLC-2026",
+        "title": "Campus Placement Eligibility Circular 2026 (synthetic fixture)",
+        "section": "2.1",
+        "page": 1,
+        "version": "1.0",
+        "effective_from": "2026-07-01",
+        "authority_level": 2
+      },
+      {
+        "doc_id": "FIX-PLC-2026",
+        "title": "Campus Placement Eligibility Circular 2026 (synthetic fixture)",
+        "section": "2.2",
+        "page": 1,
+        "version": "1.0",
+        "effective_from": "2026-07-01",
+        "authority_level": 2
+      }
+    ],
+    "tools_invoked": [
+      {
+        "tool": "what_if_pass_supplementary",
+        "input": {
+          "course_code": "CS201"
+        },
+        "output": {
+          "student_id": "S1003",
+          "course_code": "CS201",
+          "supplementary": {
+            "student_id": "S1003",
+            "course_code": "CS201",
+            "regular_result": "FAIL",
+            "regular_marks": "39/100",
+            "status": "ok",
+            "rule": {
+              "rule_id": "R-FIX-REG-2024-supplementary_allowed_results-9.1",
+              "parameter": "supplementary_allowed_results",
+              "operator": "in",
+              "value": "FAIL,ABSENT",
+              "display": "in [FAIL,ABSENT]",
+              "source_doc_id": "FIX-REG-2024",
+              "section": "9.1",
+              "version": "3.1",
+              "title": "Academic Regulations for B.Tech (synthetic fixture)",
+              "effective_from": "2024-07-01",
+              "authority_level": 1
+            },
+            "precedence": "No precedence conflict: the applicable sources agree.",
+            "upcoming": [],
+            "conflicts": [],
+            "allowed_results": [
+              "FAIL",
+              "ABSENT"
+            ],
+            "reason": "the regular result is FAIL, which qualifies for the supplementary exam",
+            "result": "ELIGIBLE"
+          },
+          "assumptions": [
+            "Passing the supplementary clears the backlog in CS201: active backlogs 1 -> 0.",
+            "CGPA stays at 6.9 (a supplementary pass may change it; that recalculation is not modelled)."
+          ],
+          "hypothetical": {
+            "active_backlogs": 0,
+            "cgpa": 6.9
+          },
+          "placement": {
+            "student_id": "S1003",
+            "result": "ELIGIBLE",
+            "checks": [
+              {
+                "criterion": "CGPA",
+                "actual": 6.9,
+                "required": ">=6.5",
+                "passed": true,
+                "rule_id": "R-FIX-PLC-2026-placement_min_cgpa-2.1"
+              },
+              {
+                "criterion": "active backlogs",
+                "actual": 0,
+                "required": "<=0",
+                "passed": true,
+                "rule_id": "R-FIX-PLC-2026-placement_max_active_backlogs-2.2"
+              }
+            ],
+            "rules": [
+              {
+                "rule_id": "R-FIX-PLC-2026-placement_min_cgpa-2.1",
+                "parameter": "placement_min_cgpa",
+                "operator": ">=",
+                "value": "6.5",
+                "display": ">=6.5",
+                "source_doc_id": "FIX-PLC-2026",
+                "section": "2.1",
+                "version": "1.0",
+                "title": "Campus Placement Eligibility Circular 2026 (synthetic fixture)",
+                "effective_from": "2026-07-01",
+                "authority_level": 2
+              },
+              {
+                "rule_id": "R-FIX-PLC-2026-placement_max_active_backlogs-2.2",
+                "parameter": "placement_max_active_backlogs",
+                "operator": "<=",
+                "value": "0",
+                "display": "<=0",
+                "source_doc_id": "FIX-PLC-2026",
+                "section": "2.2",
+                "version": "1.0",
+                "title": "Campus Placement Eligibility Circular 2026 (synthetic fixture)",
+                "effective_from": "2026-07-01",
+                "authority_level": 2
+              }
+            ],
+            "precedence": "No precedence conflict: the applicable sources agree. No precedence conflict: the applicable sources agree.",
+            "upcoming": [],
+            "conflicts": []
+          },
+          "result": "ELIGIBLE"
+        }
+      }
+    ],
+    "applied_rules": [
+      {
+        "rule_id": "R-FIX-PLC-2026-placement_min_cgpa-2.1",
+        "value": ">=6.5",
+        "source_doc_id": "FIX-PLC-2026",
+        "section": "2.1",
+        "version": "1.0",
+        "effective_from": "2026-07-01"
+      },
+      {
+        "rule_id": "R-FIX-PLC-2026-placement_max_active_backlogs-2.2",
+        "value": "<=0",
+        "source_doc_id": "FIX-PLC-2026",
+        "section": "2.2",
+        "version": "1.0",
+        "effective_from": "2026-07-01"
+      }
+    ],
+    "conflicts_detected": [],
+    "explanation": "CGPA 6.9 meets >=6.5 (rule R-FIX-PLC-2026-placement_min_cgpa-2.1); active backlogs 0 meets <=0 (rule R-FIX-PLC-2026-placement_max_active_backlogs-2.2). Source: clause 2.1 of Campus Placement Eligibility Circular 2026 (synthetic fixture) (FIX-PLC-2026 v1.0). Assumptions: Passing the supplementary clears the backlog in CS201: active backlogs 1 -> 0. CGPA stays at 6.9 (a supplementary pass may change it; that recalculation is not modelled).",
+    "as_of_date": "2026-10-06",
+    "assumptions": [
+      "Passing the supplementary clears the backlog in CS201: active backlogs 1 -> 0.",
+      "CGPA stays at 6.9 (a supplementary pass may change it; that recalculation is not modelled)."
+    ],
+    "upcoming_changes": []
+  },
+  "audit_record": {
+    "trace_id": "332ebbced9fe",
+    "timestamp": "2026-10-11T16:03:52+00:00",
+    "student_id": "S1003",
+    "question_category": "multi_step",
+    "as_of_date": "2026-10-06",
+    "question_sha256": "1fa6a4d5c7840972",
+    "sources_retrieved": [],
+    "precedence_decision": "n/a",
+    "tools_invoked": [
+      {
+        "tool": "what_if_pass_supplementary",
+        "input": {
+          "course_code": "CS201"
+        },
+        "output": {
+          "student_id": "S1003",
+          "course_code": "CS201",
+          "supplementary": {
+            "student_id": "S1003",
+            "course_code": "CS201",
+            "regular_result": "FAIL",
+            "regular_marks": "39/100",
+            "status": "ok",
+            "rule": {
+              "rule_id": "R-FIX-REG-2024-supplementary_allowed_results-9.1",
+              "parameter": "supplementary_allowed_results",
+              "operator": "in",
+              "value": "FAIL,ABSENT",
+              "display": "in [FAIL,ABSENT]",
+              "source_doc_id": "FIX-REG-2024",
+              "section": "9.1",
+              "version": "3.1",
+              "title": "Academic Regulations for B.Tech (synthetic fixture)",
+              "effective_from": "2024-07-01",
+              "authority_level": 1
+            },
+            "precedence": "No precedence conflict: the applicable sources agree.",
+            "upcoming": [],
+            "conflicts": [],
+            "allowed_results": [
+              "FAIL",
+              "ABSENT"
+            ],
+            "reason": "the regular result is FAIL, which qualifies for the supplementary exam",
+            "result": "ELIGIBLE"
+          },
+          "assumptions": [
+            "Passing the supplementary clears the backlog in CS201: active backlogs 1 -> 0.",
+            "CGPA stays at 6.9 (a supplementary pass may change it; that recalculation is not modelled)."
+          ],
+          "hypothetical": {
+            "active_backlogs": 0,
+            "cgpa": 6.9
+          },
+          "placement": {
+            "student_id": "S1003",
+            "result": "ELIGIBLE",
+            "checks": [
+              {
+                "criterion": "CGPA",
+                "actual": 6.9,
+                "required": ">=6.5",
+                "passed": true,
+                "rule_id": "R-FIX-PLC-2026-placement_min_cgpa-2.1"
+              },
+              {
+                "criterion": "active backlogs",
+                "actual": 0,
+                "required": "<=0",
+                "passed": true,
+                "rule_id": "R-FIX-PLC-2026-placement_max_active_backlogs-2.2"
+              }
+            ],
+            "rules": [
+              {
+                "rule_id": "R-FIX-PLC-2026-placement_min_cgpa-2.1",
+                "parameter": "placement_min_cgpa",
+                "operator": ">=",
+                "value": "6.5",
+                "display": ">=6.5",
+                "source_doc_id": "FIX-PLC-2026",
+                "section": "2.1",
+                "version": "1.0",
+                "title": "Campus Placement Eligibility Circular 2026 (synthetic fixture)",
+                "effective_from": "2026-07-01",
+                "authority_level": 2
+              },
+              {
+                "rule_id": "R-FIX-PLC-2026-placement_max_active_backlogs-2.2",
+                "parameter": "placement_max_active_backlogs",
+                "operator": "<=",
+                "value": "0",
+                "display": "<=0",
+                "source_doc_id": "FIX-PLC-2026",
+                "section": "2.2",
+                "version": "1.0",
+                "title": "Campus Placement Eligibility Circular 2026 (synthetic fixture)",
+                "effective_from": "2026-07-01",
+                "authority_level": 2
+              }
+            ],
+            "precedence": "No precedence conflict: the applicable sources agree. No precedence conflict: the applicable sources agree.",
+            "upcoming": [],
+            "conflicts": []
+          },
+          "result": "ELIGIBLE"
+        },
+        "status": "ok",
+        "ms": 6
+      }
+    ],
+    "rules_applied": [
+      {
+        "rule_id": "R-FIX-PLC-2026-placement_min_cgpa-2.1",
+        "value": ">=6.5",
+        "source_doc_id": "FIX-PLC-2026",
+        "section": "2.1",
+        "version": "1.0",
+        "effective_from": "2026-07-01"
+      },
+      {
+        "rule_id": "R-FIX-PLC-2026-placement_max_active_backlogs-2.2",
+        "value": "<=0",
+        "source_doc_id": "FIX-PLC-2026",
+        "section": "2.2",
+        "version": "1.0",
+        "effective_from": "2026-07-01"
+      }
+    ],
+    "conflicts_detected": [],
+    "answer_type": "calculated",
+    "planner": "heuristic",
+    "model": "none (deterministic templates)",
+    "llm_calls": 0,
+    "tokens": 0,
+    "llm_errors": [],
+    "latency_ms": 14,
+    "retrieval_config": {
+      "embedding": null,
+      "chunking": "section",
+      "top_k": 5
+    },
+    "abstention_signals": null
+  }
+}

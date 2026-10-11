@@ -3,25 +3,21 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
+venv*/
 
 # Node / Vite
 frontend/node_modules/
 frontend/dist/
 
-# Local state and source material
+# Generated state: vectors, SQLite, audit log, uploaded originals
 runtime/
 chroma-data/
-vectorstore/
-real_corpus/
-*.sqlite3
-*.db-journal
 
 # Environment and editor files
 .env
 .vscode/
 .idea/
 *.log
-evaluation/report.json
 
-# Generated deliverables
-*.zip
+# Real university documents are registered by the team and are not committed by default
+real_corpus/

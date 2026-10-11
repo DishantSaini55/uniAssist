@@ -1,0 +1,46 @@
+{
+  "request": {
+    "X-Student-Id": "S1001",
+    "question": "What is the attendance of S1002?",
+    "as_of_date": "2026-10-06"
+  },
+  "response": {
+    "trace_id": "147c614856e3",
+    "answer": "I can only share the records of the logged-in student. I cannot provide another student's data (the question refers to student S1002).",
+    "answer_type": "refused",
+    "citations": [],
+    "tools_invoked": [],
+    "applied_rules": [],
+    "conflicts_detected": [],
+    "explanation": "Request not permitted (R7).",
+    "as_of_date": "2026-10-06",
+    "assumptions": [],
+    "upcoming_changes": []
+  },
+  "audit_record": {
+    "trace_id": "147c614856e3",
+    "timestamp": "2026-10-11T16:03:53+00:00",
+    "student_id": "S1001",
+    "question_category": "other_student_data",
+    "as_of_date": "2026-10-06",
+    "question_sha256": "3087799b02d49981",
+    "sources_retrieved": [],
+    "precedence_decision": "n/a",
+    "tools_invoked": [],
+    "rules_applied": [],
+    "conflicts_detected": [],
+    "answer_type": "refused",
+    "planner": "n/a",
+    "model": "none (deterministic templates)",
+    "llm_calls": 0,
+    "tokens": 0,
+    "llm_errors": [],
+    "latency_ms": 2,
+    "retrieval_config": {
+      "embedding": null,
+      "chunking": "section",
+      "top_k": 5
+    },
+    "abstention_signals": null
+  }
+}

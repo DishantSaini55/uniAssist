@@ -1,0 +1,169 @@
+{
+  "request": {
+    "X-Student-Id": "S1001",
+    "question": "Am I eligible to appear in the exam for Data Structures?",
+    "as_of_date": "2026-10-06"
+  },
+  "response": {
+    "trace_id": "388c460e827c",
+    "answer": "You are not eligible to appear in the end-semester examination for Data Structures (CS201). Upcoming change: FIX-CIR-2027-01 will set >=85% from 2027-01-01.",
+    "answer_type": "calculated",
+    "citations": [
+      {
+        "doc_id": "FIX-CIR-2026-08",
+        "title": "Circular ACAD/2026/08 - Revised minimum attendance (synthetic fixture)",
+        "section": "1.1",
+        "page": 1,
+        "version": "1.0",
+        "effective_from": "2026-08-01",
+        "authority_level": 2
+      }
+    ],
+    "tools_invoked": [
+      {
+        "tool": "check_exam_eligibility",
+        "input": {
+          "course_code": "CS201"
+        },
+        "output": {
+          "student_id": "S1001",
+          "course_code": "CS201",
+          "course_name": "Data Structures",
+          "classes_held": 40,
+          "classes_attended": 30,
+          "attendance_pct": 75.0,
+          "status": "ok",
+          "rule": {
+            "rule_id": "R-FIX-CIR-2026-08-min_attendance_pct-1.1",
+            "parameter": "min_attendance_pct",
+            "operator": ">=",
+            "value": "80",
+            "display": ">=80%",
+            "source_doc_id": "FIX-CIR-2026-08",
+            "section": "1.1",
+            "version": "1.0",
+            "title": "Circular ACAD/2026/08 - Revised minimum attendance (synthetic fixture)",
+            "effective_from": "2026-08-01",
+            "authority_level": 2
+          },
+          "precedence": "Applicability (step 1): FIX-CIR-2027-01 takes effect on 2027-01-01, after the as-of date 2026-10-06, so it is not treated as current (upcoming change). Explicit supersession (step 2): FIX-CIR-2026-08 (level 2) supersedes FIX-REG-2024 clause 7.2, so that text is not applied. Authority (step 3): FIX-FAQ-2026 (level 4) says min_attendance_pct=65, but FIX-CIR-2026-08 (level 2) prevails over it.",
+          "upcoming": [
+            {
+              "rule_id": "R-FIX-CIR-2027-01-min_attendance_pct-1.1",
+              "value": ">=85%",
+              "source_doc_id": "FIX-CIR-2027-01",
+              "effective_from": "2027-01-01"
+            }
+          ],
+          "conflicts": [],
+          "required_pct": 80.0,
+          "meets_threshold": false,
+          "classes_short": 2,
+          "result": "NOT_ELIGIBLE"
+        }
+      }
+    ],
+    "applied_rules": [
+      {
+        "rule_id": "R-FIX-CIR-2026-08-min_attendance_pct-1.1",
+        "value": ">=80%",
+        "source_doc_id": "FIX-CIR-2026-08",
+        "section": "1.1",
+        "version": "1.0",
+        "effective_from": "2026-08-01"
+      }
+    ],
+    "conflicts_detected": [],
+    "explanation": "Your attendance in CS201 is 75.0% (30 of 40 classes), below the >=80% minimum in clause 1.1 of Circular ACAD/2026/08 - Revised minimum attendance (synthetic fixture) (FIX-CIR-2026-08 v1.0); you are 2 class(es) short at the current number of classes held. Applicability (step 1): FIX-CIR-2027-01 takes effect on 2027-01-01, after the as-of date 2026-10-06, so it is not treated as current (upcoming change). Explicit supersession (step 2): FIX-CIR-2026-08 (level 2) supersedes FIX-REG-2024 clause 7.2, so that text is not applied. Authority (step 3): FIX-FAQ-2026 (level 4) says min_attendance_pct=65, but FIX-CIR-2026-08 (level 2) prevails over it.",
+    "as_of_date": "2026-10-06",
+    "assumptions": [],
+    "upcoming_changes": [
+      {
+        "rule_id": "R-FIX-CIR-2027-01-min_attendance_pct-1.1",
+        "value": ">=85%",
+        "source_doc_id": "FIX-CIR-2027-01",
+        "effective_from": "2027-01-01"
+      }
+    ]
+  },
+  "audit_record": {
+    "trace_id": "388c460e827c",
+    "timestamp": "2026-10-11T16:03:52+00:00",
+    "student_id": "S1001",
+    "question_category": "personal_eligibility",
+    "as_of_date": "2026-10-06",
+    "question_sha256": "f34593fd4f8abfd1",
+    "sources_retrieved": [],
+    "precedence_decision": "Applicability (step 1): FIX-CIR-2027-01 takes effect on 2027-01-01, after the as-of date 2026-10-06, so it is not treated as current (upcoming change). Explicit supersession (step 2): FIX-CIR-2026-08 (level 2) supersedes FIX-REG-2024 clause 7.2, so that text is not applied. Authority (step 3): FIX-FAQ-2026 (level 4) says min_attendance_pct=65, but FIX-CIR-2026-08 (level 2) prevails over it.",
+    "tools_invoked": [
+      {
+        "tool": "check_exam_eligibility",
+        "input": {
+          "course_code": "CS201"
+        },
+        "output": {
+          "student_id": "S1001",
+          "course_code": "CS201",
+          "course_name": "Data Structures",
+          "classes_held": 40,
+          "classes_attended": 30,
+          "attendance_pct": 75.0,
+          "status": "ok",
+          "rule": {
+            "rule_id": "R-FIX-CIR-2026-08-min_attendance_pct-1.1",
+            "parameter": "min_attendance_pct",
+            "operator": ">=",
+            "value": "80",
+            "display": ">=80%",
+            "source_doc_id": "FIX-CIR-2026-08",
+            "section": "1.1",
+            "version": "1.0",
+            "title": "Circular ACAD/2026/08 - Revised minimum attendance (synthetic fixture)",
+            "effective_from": "2026-08-01",
+            "authority_level": 2
+          },
+          "precedence": "Applicability (step 1): FIX-CIR-2027-01 takes effect on 2027-01-01, after the as-of date 2026-10-06, so it is not treated as current (upcoming change). Explicit supersession (step 2): FIX-CIR-2026-08 (level 2) supersedes FIX-REG-2024 clause 7.2, so that text is not applied. Authority (step 3): FIX-FAQ-2026 (level 4) says min_attendance_pct=65, but FIX-CIR-2026-08 (level 2) prevails over it.",
+          "upcoming": [
+            {
+              "rule_id": "R-FIX-CIR-2027-01-min_attendance_pct-1.1",
+              "value": ">=85%",
+              "source_doc_id": "FIX-CIR-2027-01",
+              "effective_from": "2027-01-01"
+            }
+          ],
+          "conflicts": [],
+          "required_pct": 80.0,
+          "meets_threshold": false,
+          "classes_short": 2,
+          "result": "NOT_ELIGIBLE"
+        },
+        "status": "ok",
+        "ms": 2
+      }
+    ],
+    "rules_applied": [
+      {
+        "rule_id": "R-FIX-CIR-2026-08-min_attendance_pct-1.1",
+        "value": ">=80%",
+        "source_doc_id": "FIX-CIR-2026-08",
+        "section": "1.1",
+        "version": "1.0",
+        "effective_from": "2026-08-01"
+      }
+    ],
+    "conflicts_detected": [],
+    "answer_type": "calculated",
+    "planner": "heuristic",
+    "model": "none (deterministic templates)",
+    "llm_calls": 0,
+    "tokens": 0,
+    "llm_errors": [],
+    "latency_ms": 14,
+    "retrieval_config": {
+      "embedding": null,
+      "chunking": "section",
+      "top_k": 5
+    },
+    "abstention_signals": null
+  }
+}
