@@ -21,3 +21,4 @@ chroma-data/
 
 # Real university documents are registered by the team and are not committed by default
 real_corpus/
+.vercel/

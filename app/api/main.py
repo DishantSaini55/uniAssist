@@ -36,8 +36,10 @@ async def lifespan(_: FastAPI):
 
 app = FastAPI(title="uniAssist - University Student Services Assistant", version="2.0.0", lifespan=lifespan,
               description="Evidence-first assistant: cited document answers, deterministic tools, auditable.")
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
-                   allow_methods=["*"], allow_headers=["*"])
+# CORS_ORIGINS="https://uniassist.vercel.app,https://other.example" adds browser origins (e.g. the Vercel UI).
+_origins = ["http://localhost:5173", "http://127.0.0.1:5173"] + [
+    o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]
+app.add_middleware(CORSMiddleware, allow_origins=_origins, allow_methods=["*"], allow_headers=["*"])
 
 
 @app.exception_handler(Exception)

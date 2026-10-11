@@ -3,7 +3,8 @@ import {createRoot} from 'react-dom/client';
 import './styles.css';
 
 // Same-origin proxy: Vite forwards /api to FastAPI (see vite.config.js).
-const API = '/api';
+// In dev/Docker the Vite proxy serves /api; on Vercel set VITE_API_URL to the backend's public URL.
+const API = (import.meta.env.VITE_API_URL || '/api').replace(/\/$/, '');
 
 const prompts = [
   'What is the minimum attendance required to appear for end-semester exams?',
