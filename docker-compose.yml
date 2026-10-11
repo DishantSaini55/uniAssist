@@ -3,6 +3,7 @@
 # so restarting never re-ingests. Ollama runs on the host (see README); LLM_MODE=mock needs no model.
 services:
   backend:
+    image: dishantsaini55/uniassist-backend:latest
     build: .
     ports: ["8000:8000"]
     environment:
@@ -12,6 +13,7 @@ services:
     extra_hosts: ["host.docker.internal:host-gateway"]
     volumes: ["./runtime:/app/runtime"]
   frontend:
+    image: dishantsaini55/uniassist-frontend:latest
     build: ./frontend
     ports: ["5173:5173"]
     environment:

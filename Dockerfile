@@ -4,9 +4,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends tesseract-ocr c
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 # CPU-only torch keeps the image small; sentence-transformers reuses it.
-RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+ENV PIP_DEFAULT_TIMEOUT=300 PIP_RETRIES=15
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install torch --index-url https://download.pytorch.org/whl/cpu
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt
 # Bake the embedding models into the image so the first request never downloads anything.
 ENV HF_HOME=/opt/hf
 RUN python -c "from sentence_transformers import SentenceTransformer as S; S('BAAI/bge-small-en-v1.5'); S('sentence-transformers/all-MiniLM-L6-v2')"
