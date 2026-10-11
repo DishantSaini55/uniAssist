@@ -13,7 +13,7 @@ output was verified.
 ## How the output was verified
 
 * **Executed, not just read.** Every module was run: 88 tests (`pytest`: 87 unit/API-contract/live-ingestion/authorisation/data-kit tests, plus `pytest -m slow` evaluation gate), the evaluation harness
-  with the real embedding models, an end-to-end `uvicorn` + `curl` session, and a production build of the frontend. The Docker image build was started but not completed (slow network), so it is unverified.
+  with the real embedding models, an end-to-end `uvicorn` + `curl` session, and a production build of the frontend. The Docker images were built, the backend container was smoke-tested (`/health`, `/ask`) and both were pushed to Docker Hub.
 * **Bugs the verification caught** (and that were fixed rather than papered over): a regex that silently lost its word
   boundary; sentences broken by PDF line wraps hiding thresholds from the extractor; session names sorted
   alphabetically instead of chronologically; precedence only comparing passages that happened to retrieve well; an
